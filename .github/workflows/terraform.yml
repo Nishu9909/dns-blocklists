@@ -1,4 +1,11 @@
-mCreate service
-start or reload service: start inbound: start
-inbound/mixed[socks-in]: listen tcp4
-0.0.0.0:1080: bind: address already in use
+Server stun.voipgate.com:3478
+Outbound
+warp-out
+>
+Cancel Test
+Results
+External Address 104.28.201.80:30965
+Latency
+853 ms
+NAT Mapping Dependent Address and Port
+NAT Filtering

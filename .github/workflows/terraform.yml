@@ -1,1 +1,13 @@
-���"��Ժ[�G������.'<$��?�O��8i������p-OC/?^@�� ��-����Y�; �o0����*�����\VP:m�*���ET�T��9�W+U�0�6��)TV3{�aE���bȴ��A�J��=Ӱ+V鐏�T� ~����q�d�?LCGR �4��덦�1�A��!QU�!f$����p��8��:�}���_����9\F�%Y�.�&�R�6 �5��������bet��^����\^�K���H�G������u�ڂ;n��/fޙݕ�Y�v"S�/1�X/0sgv%�l?���T�����(\vz�Uʔi���.R��(���6�V�՚��HlLp��1f�@I����蕾}�k�������A#f%�F`�9����2�|��?������-?
+resource "cloudflare_api_token" "example_api_token" {
+  name       = "Edit zone DNS"
+
+  policies = [{
+    effect = "allow"
+    permission_groups = [{
+      id = "4755a26eedb94da69e1066d98aa820be"
+    }]
+    resources = jsonencode({
+      "com.cloudflare.api.account.zone.*" = "*"
+    })
+  }]
+}
